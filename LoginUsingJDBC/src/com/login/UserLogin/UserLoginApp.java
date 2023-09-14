@@ -48,7 +48,7 @@ public class UserLoginApp {
 					rs = st.executeQuery(query); // Storing data in ResultSet
 					if (rs != null) {
 						rs.next();
-						int count = rs.getInt(1);
+						int count = rs.getInt(1); // SQL Injection problem happens so need to handle it in future
 						if (count == 0) {
 							System.out.println("Invalid Credentials");
 						} else {
@@ -58,14 +58,14 @@ public class UserLoginApp {
 				} // end st if
 			} // end conn if
 
-		} catch (SQLException se) {
+		} catch (SQLException se) { // end try
 			se.printStackTrace();
 
 			// also you can implement SQL exception by user
 		} catch (Exception e) {
 			e.getStackTrace();
 		} finally {
-			
+
 			// Closing all SQL connections with handling exceptions
 			try {
 				if (rs != null) {
@@ -75,7 +75,7 @@ public class UserLoginApp {
 
 				se.getStackTrace();
 			}
-			
+
 			try {
 				if (st != null) {
 					st.close();
@@ -83,22 +83,22 @@ public class UserLoginApp {
 			} catch (SQLException se) {
 				se.getStackTrace();
 			}
-			
+
 			try {
-				if(conn != null) {
+				if (conn != null) {
 					conn.close();
 				}
 			} catch (SQLException se) {
 				se.getStackTrace();
 			}
-			
+
 			try {
-				if(sc != null) {
+				if (sc != null) {
 					sc.close();
 				}
 			} catch (Exception e) {
 				e.getStackTrace();
 			}
-		}
+		} // end finally
 	}
 }
