@@ -50,30 +50,27 @@ public class DeleteTableData {
 		} catch (Exception e) {
 			e.getStackTrace();
 		} finally {
-			// close connection 
+			// close connection
 			try {
 				if (st != null) {
-					sc.close();
+					st.close();
 				}
-			} catch (Exception e) {
-				e.getStackTrace();
+			} catch (SQLException se) {
+				se.printStackTrace();
 			}
 			try {
 				if (conn != null) {
-					sc.close();
+					conn.close();
 				}
-			} catch (Exception e) {
-				e.getStackTrace();
+			} catch (SQLException se) {
+				se.printStackTrace();
 			}
 			try {
-				if (sc != null) {
+				if (sc != null)
 					sc.close();
-				}
 			} catch (Exception e) {
-				e.getStackTrace();
+				e.printStackTrace();
 			}
-		}
-
+		} // end finally
 	}
-
 }

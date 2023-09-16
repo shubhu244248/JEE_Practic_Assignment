@@ -44,7 +44,8 @@ public class UpdateTableData {
 			if (conn != null) {
 				st = conn.createStatement();
 				// prepare sql query
-				String query = "UPDATE EMP SET ENAME = " + empName + ", JOB =" + empJob + ", SAl = " + empSal+ " WHERE EMPNO = " + empNo;
+				String query = "UPDATE EMP SET ENAME = " + empName + ", JOB =" + empJob + ", SAl = " + empSal
+						+ " WHERE EMPNO = " + empNo;
 				System.out.println(query);
 				if (st != null) {
 					int rowAffect = st.executeUpdate(query);
@@ -61,20 +62,23 @@ public class UpdateTableData {
 		} catch (Exception e) {
 			e.getStackTrace();
 		} finally {
+			// close objs
 			try {
 				if (st != null) {
-					sc.close();
+					st.close();
 				}
-			} catch (Exception e) {
-				e.getStackTrace();
+			} catch (SQLException se) {
+				se.getStackTrace();
 			}
+
 			try {
 				if (conn != null) {
-					sc.close();
+					conn.close();
 				}
-			} catch (Exception e) {
-				e.getStackTrace();
+			} catch (SQLException se) {
+				se.getStackTrace();
 			}
+
 			try {
 				if (sc != null) {
 					sc.close();
