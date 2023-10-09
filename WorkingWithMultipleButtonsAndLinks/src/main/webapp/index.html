@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WorkingWithMultipleButtonsAndLinks</title>
+</head>
+<body>
+	<h1 style="text-align:center;">working with multiple submit buttons and hyperlinks</h1>
+	<form action="processurl" method="POST">
+		<table align="center">
+			<tr>
+				<td> Value 1 :  <input type="text" name="t1"> </td>
+			</tr>
+			<tr>
+				<td> Value 2 :  <input type="text" name="t2"> </td>
+			</tr>
+			<tr>
+				<td> <input type="submit" value="add"  name="s1"> </td>
+				<td> <input type="submit" value="sub" name="s1"> </td>
+			</tr>
+			<tr>
+				<td> <input type="submit" value="mul" name="s1"> </td>
+				<td> <input type="submit" value="div" name="s1"> </td>
+			</tr>
+			<tr>
+				<td> <a href="processurl?s1=link1"> System Properties</a></td>
+				<td><a href="processurl?s1=link2"> System Date</a> </td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
