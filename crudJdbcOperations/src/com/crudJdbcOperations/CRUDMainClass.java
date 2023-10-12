@@ -58,6 +58,8 @@ public class CRUDMainClass {
 //			System.out.println("Name "+name);
 //			System.out.println("Course "+course);
 			
+			
+			
 			CRUDStudent std = new CRUDStudent(id, name, course);
 			al.add(std);
 			
