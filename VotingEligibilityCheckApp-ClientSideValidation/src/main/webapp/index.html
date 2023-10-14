@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Voting Eligibility Check App</title>
+	<!-- Add the Bootstrap CSS link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+	
+	<div class="container mt-5">
+		<h1 class="text-center">Voting Eligibility Check</h1>
+
+		<form action="eligibilityurl" method="GET" onsubmit="return myFunction()">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name" name="name">
+					</div>
+					<div class="form-group">
+						<label for="age">Age:</label>
+						<input type="text" class="form-control" id="age" name="age">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" name="checks">Click Here</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+		<script>
+			function myFunction() {
+				var name = document.getElementById("name").value;
+				var age = document.getElementById("age").value;
+
+				if (name === "") {
+					alert("Please enter your name");
+					return false; // Prevent form submission
+				} else if (age === "") {
+					alert("Please enter your age");
+					return false; // Prevent form submission
+				} else if (age <= 0 || age > 125) {
+					alert("Please enter a valid age between 1 and 125");
+					return false; // Prevent form submission
+				}
+
+				// If all validation passes, the form will be submitted
+				return true;
+			}
+		</script>
+	</div>
+</body>
+
+</html>
