@@ -3,8 +3,20 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
-	<display-name>VotingEligibilityCheckApp-ClientSideValidation</display-name>
+	<display-name>ServletToDBConnection_Approch2</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>emp</servlet-name>
+		<servlet-class>com.db.test.DBSearchServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>emp</servlet-name>
+		<url-pattern>/dburl</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>
