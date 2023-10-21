@@ -38,15 +38,16 @@ public class DBSearchServlet extends HttpServlet {
 			try (ResultSet rs = ps.executeQuery()) {
 				if (rs != null) {
 					if (rs.next()) {
-						pw.println("<p style='text-align: center'>");
-						pw.println("<h1 text-align: center> Employee Details are :");
-						pw.println(rs.getString(1));
-						pw.println(rs.getString(2));
-						pw.println(rs.getString(3));
-						pw.println(" </h1></p>");
+						pw.println("<h1 style='text-align: center;'> Employee Details are : <br><br>");
+						pw.println("<br> Employee No :: "+rs.getString(1)+"<br>");
+						pw.println("Employee First Name :: " +rs.getString(2)+"<br>");
+						pw.println("Employee Last Name :: "+rs.getString(3)+"<br>");
+						pw.println("<br><a href='index.html'>Home</a>");
+						pw.println("</h1>");
+						
 					} else {
-						pw.println("<p style='text-align: center;'><h1 text-align: center> Employee Details Not Found :");
-						pw.println(" </h1></p>");
+						pw.println("<h1 style='text-align: center;'> Employee Details are <b>Not Found</b> ");
+						pw.println("<br><a href='index.html'>Home</a> </h1>");
 					}
 				}
 				
