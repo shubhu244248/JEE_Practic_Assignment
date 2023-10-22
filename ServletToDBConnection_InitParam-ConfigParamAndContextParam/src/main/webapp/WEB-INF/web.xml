@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ServletToDBConnection_InitParam-ConfigParamAndContextParam</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+
+	<context-param>
+		<param-name>JdbcDriver</param-name>
+		<param-value>com.mysql.cj.jdbc.Driver</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql:///employee</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>username</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+
+
+	<servlet>
+		<servlet-name>emp1</servlet-name>
+		<servlet-class>com.db.test.DBSearchEmpConfig_InintParamServlet</servlet-class>
+
+
+		<init-param>
+			<param-name>JdbcDriver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql:///employee</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>root</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>admin</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet>
+		<servlet-name>emp2</servlet-name>
+		<servlet-class>com.db.test.DBSearchEmpContext_ContextParamServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>emp1</servlet-name>
+		<url-pattern>/emp1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>emp2</servlet-name>
+		<url-pattern>/emp2</url-pattern>
+	</servlet-mapping>
+
+</web-app>
