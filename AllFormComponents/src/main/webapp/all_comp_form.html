@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container mt-5">
+		<h1 class="text-center text-danger">Working with different types of Form comps</h1>
+
+		<form action="formurl" method="GET">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="pname">Person Name:</label>
+						<input type="text" class="form-control" id="pname" name="pname" maxlength="10" required>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="form-group">
+						<label for="page">Person Age:</label>
+						<input type="text" class="form-control" id="page" name="page" required>
+						<small class="text-danger">*</small>
+					</div>
+					<div class="form-group">
+						<label for="paddrs">Person Address:</label>
+						<textarea class="form-control" id="paddrs" name="paddrs" rows="5" cols="20"
+							maxlength="100"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Gender:</label>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gender" id="male" value="M">
+							<label class="form-check-label" for="male">Male</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gender" id="female" value="F" checked>
+							<label class="form-check-label" for="female">Female</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="married" name="ms" value="married">
+							<label class="form-check-label" for="married">Married</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="qlfy">Qualification:</label>
+						<select class="form-control" id="qlfy" name="qlfy">
+							<option value="" selected>---Select---</option>
+							<option value="Engineer">B.E/B.Tech</option>
+							<option value="Medico">MBBS/MD</option>
+							<option value="Accountant">B.com/M.com</option>
+							<option value="arts">B.A/M.A</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="languages">Languages known:</label>
+						<select class="form-control" id="languages" name="languages" multiple>
+							<option value="telugu" >Telugu</option>
+							<option value="english">English</option>
+							<option value="hindi">Hindi</option>
+							<option value="marathi">Marathi</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Hobbies:</label>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="reading" name="hb" value="reading"
+								checked>
+							<label class="form-check-label" for="reading">Reading</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="watching" name="hb" value="watching">
+							<label class="form-check-label" for="watching">Watching TV</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="playing" name="hb" value="playing">
+							<label class="form-check-label" for="playing">Playing Cricket</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="roaming" name="hb" value="roaming">
+							<label class="form-check-label" for="roaming">Travelling</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dob">Date of Birth:</label>
+						<input type="date" class="form-control" id="dob" name="dob">
+					</div>
+					<div class="form-group">
+						<label for="tob">Time of Birth:</label>
+						<input type="time" class="form-control" id="tob" name="tob">
+					</div>
+					<div class="form-group">
+						<label for="mob">Month name of Birth:</label>
+						<input type="month" class="form-control" id="mob" name="mob">
+					</div>
+					<div class="form-group">
+						<label for="wdb">Week number name of Birth in DOB year:</label>
+						<input type="week" class="form-control" id="wdb" name="wdb">
+					</div>
+					<div class="form-group">
+						<label for="favNumber">Select Favorite Number:</label>
+						<input type="range" class="form-control" id="favNumber" min="0" max="9" name="favNumber">
+					</div>
+					<div class="form-group">
+						<label for="mobileNo">Phone Number:</label>
+						<input type="tel" class="form-control" id="mobileNo" name="mobileNo">
+					</div>
+					<div class="form-group">
+						<label for="mail">Email Id:</label>
+						<input type="email" class="form-control" id="mail" name="mail">
+					</div>
+					<div class="form-group">
+						<label for="favColor">Favorite Color:</label>
+						<input type="color" class="form-control" id="favColor" name="favColor">
+					</div>
+					<div class="form-group">
+						<label for="income">Person Income:</label>
+						<input type="number" class="form-control" id="income" min="10000" max="1000000" name="income">
+					</div>
+					<div class="form-group">
+						<label for="fburl">FB Url:</label>
+						<input type="url" class="form-control" id="fburl" name="fburl">
+					</div>
+					<div class="form-group">
+						<label for="favSearch">Favorite Google Search String:</label>
+						<input type="search" class="form-control" id="favSearch" name="favSearch">
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 text-center">
+					<button type="submit" class="btn btn-primary">Process Details</button>
+					<button type="reset" class="btn btn-secondary">Cancel</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
