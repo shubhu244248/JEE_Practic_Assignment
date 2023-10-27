@@ -20,8 +20,8 @@ public class ErrorServlet extends HttpServlet {
 		// set response content ype
 		res.setContentType("text/html");
 		// Write error response
-		pw.println("<h1 style='color:red;text-align:center'> Internal problem -- try again </h1>");
-		// close stream
+		pw.println("<h1 style='color:red;text-align:center'> Internal problem -- try again ");
+		pw.println("<br><a href='search.html'>Home</a> </h1>");		// close stream
 		pw.close();
 	}
 
