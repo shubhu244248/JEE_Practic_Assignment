@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%!public String generateWishMessage(String user) {
+	<%!public String generateWishMessage(String user) {  // Declaration Tag
 		LocalDateTime ldt = LocalDateTime.now();
 		int hr = ldt.getHour();
 
@@ -28,16 +28,17 @@
 	<br>
 	<h1 style="text-align: center;">
 		Date and Tome is ::
-		<%=new Date()%></h1>
+		<%=new Date()%></h1><!--  expression tag -->
 
 
 	<%
-	String name = "Shubham Patil";
+	String name = "Shubham Patil"; /* Scriplet Tag */
 	%>
 	<br>
 	<h1 style="text-align: center;">
 		Wish You Happy ::
 		<%=generateWishMessage(name)%>
+		<!--  expression tag -->
 	</h1>
 </body>
 </html>
